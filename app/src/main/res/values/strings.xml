@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Apple Star Movies</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="tab_text_1">Home</string>
+    <string name="tab_text_2">Viewed</string>
+
+    <string name="picture_transition_name">showDetail</string>
+
+</resources>
