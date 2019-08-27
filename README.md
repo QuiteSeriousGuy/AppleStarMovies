@@ -14,6 +14,12 @@ The third view is the Viewed Screen. Here you can see what was the movies you br
 
 ![third](samples/images/screen3.png)
 
+## Subtle Features
+ - When you back press on the Main Screen or View Screen, thus ending the app, you go back that screen when you open it again.
+ - When you force close the app when in Detail Screen, you go back the Detail Screen when you open it again.
+ - After closing the app, when opening it again, it shows last visit on the Main Screen list header
+ - After getting data from the API, the app can be used offline
+ 
 ## API
 We used the Apple iTunes API to get data. Here is the documentation:
 
@@ -24,7 +30,6 @@ As for the query for the data, it is based on this link:
 https://itunes.apple.com/search?term=star&amp;country=au&amp;media=movie&amp;all 
 
 It's then broken down to Movies in AUS that has Star on its title. I limit the query to the maximum 200.
-
 
 ## Design
 I tried to follow the listing in iTunes for their albums.
@@ -56,6 +61,7 @@ https://github.com/QuiteSeriousGuy/AppleStarMovies/blob/master/samples/apk/app-r
 
 ## Improvements
  - Needs more images
+ - Refresh
  - Can be extended to search for terms other than Star
  - Sorting function
  - Star function
