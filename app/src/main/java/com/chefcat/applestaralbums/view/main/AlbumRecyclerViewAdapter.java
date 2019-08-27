@@ -21,7 +21,7 @@ import butterknife.ButterKnife;
 
 public class AlbumRecyclerViewAdapter extends RecyclerView.Adapter<AlbumRecyclerViewAdapter.ViewHolder> {
 
-    private final List<Album> mValues;
+    private List<Album> mValues;
     private final BaseFragment.OnListFragmentInteractionListener mListener;
 
     private static final int TYPE_HEADER = 0;
@@ -55,6 +55,10 @@ public class AlbumRecyclerViewAdapter extends RecyclerView.Adapter<AlbumRecycler
     @Override
     public long getItemId(int position) {
         return position;
+    }
+
+    public void setValues(List<Album> albums) {
+        this.mValues = albums;
     }
 
     @Override

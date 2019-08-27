@@ -56,6 +56,7 @@ public class AlbumFragment extends Fragment {
 
         albumList.setLayoutManager(manager);
         albumList.setAdapter(adapter);
+        
         manager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {
@@ -69,8 +70,13 @@ public class AlbumFragment extends Fragment {
     public void setItems(List<Album> albums){
         this.albums = albums;
         if(albumList != null) {
-            adapter = new AlbumRecyclerViewAdapter(albums, mListener);
-            albumList.setAdapter(adapter);
+            if(adapter != null) {
+                adapter.setValues(albums);
+                adapter.notifyDataSetChanged();
+            } else {
+                adapter = new AlbumRecyclerViewAdapter(albums, mListener);
+                albumList.setAdapter(adapter);
+            }
         } else {
             Log.e("Null", "Set Items");
         }
